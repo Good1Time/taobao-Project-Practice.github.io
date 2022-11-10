@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+}
+/* 统一样式 */
+/* 清楚浮动 */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 内容区域居中 */
+.container {
+  width: 1190px;
+  margin: 0 auto;
+}
+/* 统一样式结束 */
+/* 公共样式 */
+/* 二级菜单 */
+.list-head {
+  position: relative;
+}
+
+.list-head:hover {
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: #eeeeee;
+  background-color: #fff;
+  padding: 0 5px;
+}
+.list-head:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border: 1px solid #fff;
+  top: 34px;
+  left: 0;
+  box-sizing: border-box;
+}
+.list-head:hover .list {
+  display: block;
+}
+.ico .iconfont {
+  font-size: 1px;
+  /* margin-left: 5px; */
+}
+.list-head .list {
+  display: none;
+  max-height: 270px;
+  overflow: auto;
+  border: 1px solid #eee;
+  position: absolute;
+  top: 35px;
+  left: -1px;
+  z-index: 0;
+}
+.top-nav .container .list-head:hover {
+  padding: 0 5px;
+}
+.list-head .list ul {
+  padding: 8px 0;
+}
+.list-head .list ul li {
+  height: 29px;
+  line-height: 29px;
+}
+.list-head .list ul li:hover {
+  background-color: #f4f4f4;
+}
+/* 二级菜单 */
+
+/* 公共样式结束 */
+
+/* 头部导航栏 */
+
+.top-nav {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.top-nav a,
+.top-nav .barrier-free {
+  color: #6c6c6c;
+  display: inline-block;
+  height: 35px;
+  margin-right: 7px;
+}
+.top-nav a:hover,
+.top-nav .barrier-free:hover {
+  color: #f40;
+}
+/* 内容区域居中 */
+.top-nav .container {
+  height: 35px;
+}
+
+/* 头部导航栏左侧区域 */
+.top-nav .container .left-nav > ul > li,
+.top-nav .container .right-nav > ul > li {
+  height: 35px;
+  line-height: 35px;
+  float: left;
+  padding: 0 6px;
+}
+.top-nav .container .left-nav,
+.top-nav .container .right-nav {
+  height: 35px;
+}
+.top-nav .container .left-nav {
+  float: left;
+}
+.top-nav .container .left-nav .country {
+  color: #3c3c3c;
+}
+.top-nav .container .left-nav .country .iconfont {
+  margin-left: 5px;
+}
+.top-nav .container .left-nav .list-head .list ul li {
+  width: 242px;
+  padding-left: 8px;
+  cursor: pointer;
+}
+/* .top-nav .container .left-nav .login a {
+  margin-right: 6px;
+} */
+.top-nav .container .left-nav .login a:first-child {
+  color: #f40;
+}
+.top-nav .container .left-nav .barrier-free {
+  cursor: pointer;
+}
+/* 头部导航栏右侧区域 */
+.top-nav .container .right-nav {
+  height: 35px;
+  float: right;
+}
+.top-nav .container .right-nav .list-head .list ul li {
+  white-space: nowrap;
+  padding: 0 5px;
+}
+.top-nav .container .right-nav .list-head .list ul li a:hover {
+  color: #6c6c6c;
+}
+.top-nav .container .right-nav .cart .iconfont {
+  color: #f40;
+  font-weight: bold;
+  margin: 0 5px 0 0;
+}
+.top-nav .container .right-nav .favorite .iconfont:first-child {
+  margin: 0 5px 0 0;
+}
+.top-nav .container .right-nav .pipe {
+  color: #ddd;
+}
+/* 头部导航栏结束 */
