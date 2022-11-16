@@ -4,9 +4,12 @@
   list-style: none;
   text-decoration: none;
 }
+
 body {
   font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+  background: url(../images/body-bg.png) repeat-x;
 }
+
 /* 统一样式 */
 /* 清楚浮动 */
 .clearfix::after {
@@ -14,11 +17,7 @@ body {
   display: block;
   clear: both;
 }
-/* 内容区域居中 */
-.container {
-  width: 1190px;
-  margin: 0 auto;
-}
+
 /* 统一样式结束 */
 /* 公共样式 */
 /* 二级菜单 */
@@ -33,6 +32,7 @@ body {
   background-color: #fff;
   padding: 0 5px;
 }
+
 .list-head:hover::after {
   content: "";
   position: absolute;
@@ -41,14 +41,18 @@ body {
   top: 34px;
   left: 0;
   box-sizing: border-box;
+  z-index: 2;
 }
+
 .list-head:hover .list {
   display: block;
 }
+
 .ico .iconfont {
   font-size: 1px;
   /* margin-left: 5px; */
 }
+
 .list-head .list {
   display: none;
   max-height: 270px;
@@ -57,24 +61,40 @@ body {
   position: absolute;
   top: 35px;
   left: -1px;
-  z-index: 0;
+  z-index: 1;
 }
+
 .top-nav .container .list-head:hover {
   padding: 0 5px;
 }
+
 .list-head .list ul {
   padding: 8px 0;
+  background-color: #fff;
 }
+
 .list-head .list ul li {
   height: 29px;
   line-height: 29px;
 }
+
 .list-head .list ul li:hover {
   background-color: #f4f4f4;
 }
+
 /* 二级菜单 */
+input {
+  border: 0;
+  outline: 0;
+}
 
 /* 公共样式结束 */
+
+/* 内容区域居中 */
+.container {
+  width: 1190px;
+  margin: 0 auto;
+}
 
 /* 头部导航栏 */
 
@@ -82,6 +102,7 @@ body {
   width: 100%;
   background-color: #f5f5f5;
 }
+
 .top-nav a,
 .top-nav .barrier-free {
   color: #6c6c6c;
@@ -89,71 +110,241 @@ body {
   height: 35px;
   margin-right: 7px;
 }
+
 .top-nav a:hover,
 .top-nav .barrier-free:hover {
   color: #f40;
 }
+
 /* 内容区域居中 */
 .top-nav .container {
   height: 35px;
 }
 
 /* 头部导航栏左侧区域 */
-.top-nav .container .left-nav > ul > li,
-.top-nav .container .right-nav > ul > li {
+.top-nav .container .left-nav>ul>li,
+.top-nav .container .right-nav>ul>li {
   height: 35px;
   line-height: 35px;
   float: left;
   padding: 0 6px;
 }
+
 .top-nav .container .left-nav,
 .top-nav .container .right-nav {
   height: 35px;
 }
+
 .top-nav .container .left-nav {
   float: left;
 }
-.top-nav .container .left-nav .country {
+
+.top-nav .container .left-nav .country,
+.top-nav .container .left-nav .list-head .list ul li a {
   color: #3c3c3c;
 }
+
 .top-nav .container .left-nav .country .iconfont {
   margin-left: 5px;
 }
+
 .top-nav .container .left-nav .list-head .list ul li {
   width: 242px;
   padding-left: 8px;
   cursor: pointer;
 }
+
 /* .top-nav .container .left-nav .login a {
   margin-right: 6px;
 } */
 .top-nav .container .left-nav .login a:first-child {
   color: #f40;
 }
+
 .top-nav .container .left-nav .barrier-free {
   cursor: pointer;
 }
+
 /* 头部导航栏右侧区域 */
 .top-nav .container .right-nav {
   height: 35px;
   float: right;
 }
+
 .top-nav .container .right-nav .list-head .list ul li {
   white-space: nowrap;
   padding: 0 5px;
 }
+
 .top-nav .container .right-nav .list-head .list ul li a:hover {
   color: #6c6c6c;
 }
+
 .top-nav .container .right-nav .cart .iconfont {
   color: #f40;
   font-weight: bold;
   margin: 0 5px 0 0;
 }
+
 .top-nav .container .right-nav .favorite .iconfont:first-child {
   margin: 0 5px 0 0;
 }
+
 .top-nav .container .right-nav .pipe {
   color: #ddd;
 }
+
 /* 头部导航栏结束 */
+
+/* 头部区域 */
+/* 头部区域-logo */
+
+.header {
+  height: 121px;
+  padding-top: 24px;
+}
+
+.header .container {
+  position: relative;
+
+}
+
+.header .logo {
+  width: 190px;
+  margin-left: 32px;
+  margin-top: 8px;
+  float: left;
+}
+
+.header .logo h1 a {
+  display: block;
+  margin-left: 22px;
+  padding-top: 58px;
+  width: 142px;
+  height: 0;
+  background: url(../images/taobao-logo.png) 0 0 no-repeat;
+  overflow: hidden;
+}
+
+/* 头部区域-logo结束 */
+
+/* 头部区域-搜索栏 */
+.header .search-box {
+  float: left;
+  width: 742px;
+  height: 80px;
+  margin-left: 33px;
+  margin-top: 16px;
+}
+
+.header .search-box .input {
+  width: 738px;
+  border: 2px solid #FF5000;
+  border-radius: 100px;
+  position: relative;
+  background-color: #fff;
+}
+
+.header .search-box .input .input-title {
+  width: 65px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 100px;
+  text-align: center;
+  position: absolute;
+}
+
+.header .search-box .input .input-title>span {
+  margin-right: 2px;
+}
+
+.header .search-box .input .input-title:hover .input-list ul{
+  display: block;
+  background-color: #fff;
+  position: relative;
+  top: -39px;
+  left: -1px;
+  border-radius: 20px 0 0 0;
+}
+.header .search-box .input .input-title:hover .input-list ul li{
+  color: #333;
+}
+.header .search-box .input .input-title:hover .input-list ul li:hover{
+  color: #f40;
+}
+.header .search-box .input .input-title:hover .input-list ul li:hover:first-child{
+  color: #333;
+}
+.header .search-box .input .input-title .input-list ul{
+  display: none;
+}
+.header .search-box .input .separator {
+  position: absolute;
+  top: 10px;
+  left: 58px;
+  color: #F3F0F0;
+}
+.header .search-box .input input {
+  width: 660px;
+  height: 38px;
+  border-radius: 50px 0 0 50px;
+  font-size: 14px;
+  padding: 9px 0 9px 68px;
+  box-sizing: border-box;
+}
+.header .search-box .input .search{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.header .search-box .input .search button{
+  width: 72px;
+  height: 34px;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #f50;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.header .search-box .input-item{
+  margin-top: 8px;
+  margin-left: 19px;
+}
+.header .search-box .input-item ul li{
+float: left;
+margin-right: 8px;
+}
+.header .search-box .input-item ul li a{
+  color: #333;
+}
+.header .search-box .input-item ul li a:hover{
+  color: #f40;
+}
+
+/* 头部区域-搜索栏结束 */
+.header .qr {
+  position: absolute;
+  right: 58px;
+}
+.header .qr .qr-container{
+  display: block;
+  width: 76px;
+    height: 90px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    text-align: center;
+}
+.header .qr .qr-container span{
+  line-height: 20px;
+  color: #FF5000;
+}
+.header .qr .qr-container img{
+  display: block;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto;
+}
+
+/* 头部区域结束 */
